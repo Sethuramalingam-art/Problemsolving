@@ -32,6 +32,15 @@ Constraints:
  * @param {number} k
  * @return {number}
  */
+//descending
+for (let i = n;i >= 0; i--)
+        for (let j = n;j > n - i; j--)
+            if (a[j] > a[j-1]){
+                let tempswap = a[j];
+                a[j] = a[j - 1];
+                a[j - 1] = tempswap;
+            }
+    print(a, n);
 
 var bubbleSort = function(nums) {
     var temp;
