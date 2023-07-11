@@ -1,22 +1,20 @@
-//using hashmap method
-function missElement(arr, N) {
-  let i;
+function missing(arr) {
   let temp = [];
-  for (i = 0; i <= N; i++) {
+  for (var i = 0; i < arr.length; i++) {
     temp[i] = 0;
   }
-
-  for (i = 0; i < N; i++) {
+  for (var i = 0; i < arr.length; i++) {
     temp[arr[i] - 1] = 1;
   }
+  console.log(temp);
 
   let ans = 0;
-  for (i = 0; i <= N; i++) {
-    if (temp[i] == 0) ans = i + 1;
+  for (var i = 0; i < arr.length; i++) {
+    if (temp[i] === 0) {
+      ans = i + 1;
+    }
   }
-  console.log(ans);
+  return ans;
 }
 
-var x = [9, 10, 12, 13]; // find missing element => 4
-
-console.log(missElement(x, x.length));
+console.log(missing(arr)); // this solution is only for [0,1,2,5,4,5]
