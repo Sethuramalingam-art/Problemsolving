@@ -23,3 +23,20 @@ function sumOfSumArray(arr) {
 
 
 console.log(sumOfSumArray([1,2,3,4])) //O(N2)
+
+function SubArraySum(arr, n)
+{
+    let result = 0;
+  
+    // Computing sum of
+    // subarray using formula
+    for(let i = 0; i < n; i++)
+        result += (arr[i] * (i + 1) *
+                            (n - i));
+  
+    // Return all subarray sum
+    return result ;
+}
+
+// Time complexity: O(N)
+// Auxiliary Space: O(1)
