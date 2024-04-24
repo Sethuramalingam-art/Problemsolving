@@ -42,25 +42,22 @@ for (let i = n;i >= 0; i--)
             }
     print(a, n);
 
-var bubbleSort = function(nums) {
+var sortColors = function(nums) {
     var temp;
     var swapped=false;
-    for(var i=0;i<nums.length-1;i++) {
-        for (var j=0;j<nums.length-i-1;j++) {
-            if (nums[j]>nums[j+1]) {
+    for(var i=0;i<nums.length;i++){
+        for(var j=0;j<nums.length-i-1;j++){
+if (nums[j]>nums[j+1]) {
                 temp=nums[j];
                 nums[j]=nums[j+1];
                 nums[j+1]=temp;
-                swapped=true
             }
-
-            if (swapped===false) break; 
         }
     }
     return nums
-}
+};
 var findKthLargest = function(nums, k) {
-    var resultArr = bubbleSort(nums);
+    var resultArr = sortColors(nums);
     
     return resultArr[nums.length-k]
 };
