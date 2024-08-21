@@ -1,0 +1,22 @@
+your work for a shop that wihses to give a discount of discount% to the most expensive item purchased by a given customer fduring sales perioed only one product can be  bebefit from discount.
+you are tasked by the shop onwer to implement the function  caltotalprice(prices,discount) which take the list of the prices of the product purchased by a customer and percentage discount as parameters and returns the total purchase price as integer(rouned down if the totalt price is float number)
+
+constraints:
+0<=discount<=100
+0<price of product <10000
+0<number of product <100
+
+
+function calTotalPrice(prices, discount) {
+    // Find the most expensive item
+    const maxPrice = Math.max(...prices);
+    
+    // Calculate the discount amount for the most expensive item
+    const discountAmount = (maxPrice * discount) / 100;
+    
+    // Calculate the total price with the discount applied
+    const totalPrice = prices.reduce((total, price) => total + price, 0) - discountAmount;
+    
+    // Return the total price rounded down to the nearest integer
+    return Math.floor(totalPrice);
+}
