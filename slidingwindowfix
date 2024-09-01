@@ -1,0 +1,24 @@
+Maxsum for subarray k=4
+function maxSum(arr, k) {
+    var windSum=0;
+    var start = 0;
+    var end=0;
+    var maxSum = 0;
+
+    while(end<k){
+        windSum+=arr[end++];
+
+    }
+    while(end<arr.length){
+        windSum += arr[end++]-arr[start++];
+        maxSum=Math.max(windSum,maxSum);
+    }
+    return maxSum
+
+}
+
+
+
+
+var arr=[1,9,-1,-2,7,3,-1,2];
+console.log(maxSum(arr,4));
