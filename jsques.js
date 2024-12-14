@@ -34,3 +34,19 @@ primitive data types are compared by value.
 non-primitive data types are compared by reference.
 
 please read this: https://www.freecodecamp.org/news/javascript-comparison-operators-how-to-compare-objects-for-equality-in-js/
+
+
+var arr = [1,3];
+arr[12] = 12;
+arr.length = 13;
+
+arr.forEach((x)=>{console.log('hello')}) => Hello , hello hello because onlt 3 numbers are there in arr
+
+for (let x of arr) {
+	console.log('hrllo'); // hello hello hello hello hello hello hello hello hello hello hello hello
+}
+
+
+for (let x in arr) {
+	console.log('hrllo'); // hello hello hello
+}
