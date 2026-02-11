@@ -1,0 +1,24 @@
+Find first and last occurance in sorted arrays
+valid parenthesis
+remove duplicates in sorted array
+detect linkedlist cycle
+circular likedlist
+remove node in linkedlist(fast slow pointer)
+sliding window problems
+when -ve numbers use kadene algo
+max sum of subarray sub string problems
+merge sort problems
+3sum problems
+palindrome linkedlist
+find peak element
+continous array
+find all anagrams
+happy number
+contains most water 
+reverese linkedlist
+
+
+
+
+https://leetcode.com/progress/
+
